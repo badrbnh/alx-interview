@@ -5,7 +5,8 @@ Pascal triangle
 
 
 def pascal_triangle(n):
-    """returns a list of lists of integers representing the Pascal’s triangle of n"""
+    """returns a list of lists of integers representing
+    the Pascal’s triangle of n"""
     base = [[1], [1, 1]]
 
     if n <= 0:
