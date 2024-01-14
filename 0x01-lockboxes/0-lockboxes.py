@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+'''Lockboxes problem'''
+
+
 def canUnlockAll(boxes):
     '''Checks if keys in boxes can open all boxes'''
-    
     keys = [0]
     visited = set()
 
