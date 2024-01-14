@@ -1,16 +1,20 @@
 #!/usr/bin/python3
-'''Lockboxes problem'''
+"""
+Lockboxes problem
+"""
 
 
 def canUnlockAll(boxes):
-    '''Checks if keys in boxes can open all boxes'''
-    keys = [0]
-    visited = set()
+    """check if all boxes can be opened"""
+    box_set = set(boxes[0])
+    for n in boxes[0]:
+        if n < len(boxes):
+            box_set.update(boxes[n])
 
-    while keys:
-        current_key = keys.pop()
-        if current_key not in visited:
-            visited.add(current_key)
-            keys.extend(boxes[current_key])
+    for i in range(1, len(boxes)):
+        if i in box_set:
+            box_set.update(boxes[i])
+        else:
+            return False
 
-    return len(visited) == len(boxes)
+    return True
