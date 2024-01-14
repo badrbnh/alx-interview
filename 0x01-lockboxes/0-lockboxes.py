@@ -9,7 +9,6 @@ def canUnlockAll(boxes):
 
     while keys:
         current_key = keys.pop()
-        print(current_key)
         if current_key not in visited:
             visited.add(current_key)
             keys.extend(boxes[current_key])
