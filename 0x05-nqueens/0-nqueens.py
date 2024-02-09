@@ -5,6 +5,7 @@ import sys
 
 
 def is_safe(placed_queens, row, col):
+    """function check safe"""
     for cord in placed_queens:
         if (
             cord[1] == col
